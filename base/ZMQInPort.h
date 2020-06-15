@@ -5,7 +5,7 @@
 #include <zmq.hpp> // https://github.com/zeromq/cppzmq
 #include "InPort.h"
 
-#include "jsoncpp/json/json.h"
+#include "json/json.h"
 
 #define DEBUG_OUTPUT false 
 

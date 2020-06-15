@@ -16,7 +16,7 @@
 #include "sys/time.h"
 
 #include <iostream>
-#include "jsoncpp/json/json.h"
+#include "json/json.h"
 
 /**
  * Publishes continous data unsing a ZeroMQ socket using JSON serialization. 
