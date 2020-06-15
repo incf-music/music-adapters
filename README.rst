@@ -13,3 +13,9 @@ Installation
   cmake -DCMAKE_INSTALL_PREFIX:PATH=<PREFIX> -DMUSIC_ROOT_DIR=<MUSIC_INSTALL_PREFIX> <music-adapters_SOURCE>
   make
   make install
+
+sometimes, cmake does not find mpi.h because it selects the wrong compilers. In this case try:
+
+.. code:: bash
+
+  cmake -DCMAKE_INSTALL_PREFIX:PATH=<PREFIX> -DMUSIC_ROOT_DIR=<MUSIC_INSTALL_PREFIX> -DCMAKE_C_COMPILER=mpicc -DCMAKE_CXX_COMPILER=mpic++ <music-adapters_SOURCE>
