@@ -29,6 +29,7 @@ Compiling and making
 If the compiler runs into trouble because it can't find a file "json.h", try
 
 .. code:: bash
+
   # if libjsoncpp was installed with apt
   cp -r /usr/include/jsoncpp/json <music-adapters_SOURCE>/base
   # if libjsoncpp was installed with anaconda
