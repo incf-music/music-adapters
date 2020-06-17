@@ -11,17 +11,12 @@ Installing requirements with conda
 
   conda install pkg-config jsoncpp blas gsl
   conda install -c conda-forge cppzmq
-  mkdir <music-adapters_SOURCE>/base/jsoncpp
-  cp -r ~/anaconda2/pkgs/jsoncpp-<SUFFIX>/include/json <music-adapters_SOURCE>/base/jsoncpp
+
 Installing requirements with apt
 ================================
 .. code:: bash
 
   sudo apt install pkg-config libjsoncpp-dev libzmq3-dev libblas-dev libgsl-dev
-  cp -r /usr/include/jsoncpp <music-adapters_SOURCE>/base
-
-If the jsoncpp header files are not in these places, search your include directory for a
-folder json including a file json.h, and put this folder into <music-adapters_SOURCE>/base/jsoncpp.
 
 Compiling and making
 ====================
@@ -30,3 +25,10 @@ Compiling and making
   cmake -DCMAKE_INSTALL_PREFIX:PATH=<PREFIX> -DMUSIC_ROOT_DIR=<MUSIC_INSTALL_PREFIX> <music-adapters_SOURCE>
   make
   make install
+
+If the compiler runs into trouble because it can't find a file "json.h", try
+.. code:: bash
+  cp -r /usr/include/jsoncpp/json <music-adapters_SOURCE>/base # if libjsoncpp was installed with apt
+  cp -r ~/anaconda2/pkgs/jsoncpp-<SUFFIX>/include/jsoncpp/json <music-adapters_SOURCE>/base # if libjsoncpp was installed with anaconda
+ 
+or copying any other folder "json" containing a file "json.h" to the source directory.
