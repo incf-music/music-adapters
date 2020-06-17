@@ -27,8 +27,11 @@ Compiling and making
   make install
 
 If the compiler runs into trouble because it can't find a file "json.h", try
+
 .. code:: bash
-  cp -r /usr/include/jsoncpp/json <music-adapters_SOURCE>/base # if libjsoncpp was installed with apt
-  cp -r ~/anaconda2/pkgs/jsoncpp-<SUFFIX>/include/jsoncpp/json <music-adapters_SOURCE>/base # if libjsoncpp was installed with anaconda
+  # if libjsoncpp was installed with apt
+  cp -r /usr/include/jsoncpp/json <music-adapters_SOURCE>/base
+  # if libjsoncpp was installed with anaconda
+  cp -r ~/anaconda2/pkgs/jsoncpp-<SUFFIX>/include/jsoncpp/json <music-adapters_SOURCE>/base
  
 or copying any other folder "json" containing a file "json.h" to the source directory.
