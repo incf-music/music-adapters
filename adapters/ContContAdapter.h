@@ -15,7 +15,7 @@
 
 #include "sys/time.h"
 
-#include "jsoncpp/json/json.h"
+#include "json/json.h"
 #include <fstream>
 
 #include <gsl/gsl_matrix_double.h>
